@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information about a single-owner, encrypted Ubuntu backup integration for Coffee Ark.">
+  <title>Coffee Ark Ubuntu Backups · Overview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header><div class="topline">
+    <a class="brand" href="index.html">Coffee Ark<span>Ubuntu Backups · Private integration</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Use &amp; limits</a>
+    </nav>
+  </div></header>
+  <main id="main">
+    <p class="eyebrow">Small by design</p>
+    <h1>Quiet backups.<br>Kept personal.</h1>
+    <p class="lead">Coffee Ark Ubuntu Backups is a single-owner utility that creates encrypted database snapshots on Ubuntu and delivers them to its own private Google Drive folder.</p>
+    <p class="lead">This is not the Coffee Ark pantry application, a signup page, or a public backup service. These pages simply explain the private integration.</p>
+    <section class="panel" aria-labelledby="how">
+      <h2 id="how">A simple path to a separate copy.</h2>
+      <ol class="steps">
+        <li><h3>Make a snapshot</h3><p>The utility produces a bounded database backup on Ubuntu.</p></li>
+        <li><h3>Encrypt first</h3><p>Encryption happens before upload. The recovery identity is kept separately from Ubuntu and Drive.</p></li>
+        <li><h3>Check delivery</h3><p>File metadata and downloaded encrypted bytes are checked for reconciliation and transport verification.</p></li>
+      </ol>
+    </section>
+    <section class="panel scope" aria-labelledby="scope">
+      <h2 id="scope">A deliberately limited Google permission.</h2>
+      <p>The requested scope is <code>https://www.googleapis.com/auth/drive.file</code>. It covers files created by the app or explicitly selected for it. This utility creates its own private folder and does not browse unrelated Drive files.</p>
+      <p class="note">This scope is not read-only, immutable, or append-only. Limited access is not a promise that stored snapshots cannot be changed or removed.</p>
+    </section>
+    <section class="columns" aria-label="Further information">
+      <section><h2>Personal data stays purposeful.</h2><p>No advertising, sale of data, or unrelated use. No automated sharing or deletion.</p><a href="privacy.html">Read the privacy notes</a></section>
+      <section><h2>Useful, not a guarantee.</h2><p>Schedules and recovery are not guaranteed. Database snapshots are not a complete hosted-platform backup.</p><a href="terms.html">Understand the limits</a></section>
+    </section>
+  </main>
+  <footer><p>Coffee Ark Ubuntu Backups</p><p>Private utility · No public service or signups</p><p>Last updated <time datetime="2026-10-19">19 October 2026</time></p></footer>
+</div>
+</body>
+</html>
