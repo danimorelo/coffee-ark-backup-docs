@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Intended use and recovery limits for the private Coffee Ark Ubuntu Backups integration.">
+  <title>Coffee Ark Ubuntu Backups · Use &amp; limits</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header><div class="topline">
+    <a class="brand" href="index.html">Coffee Ark<span>Ubuntu Backups · Private integration</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html" aria-current="page">Use &amp; limits</a>
+    </nav>
+  </div></header>
+  <main id="main" class="details">
+    <p class="eyebrow">Use &amp; limits</p>
+    <h1>A useful copy.<br>Not a recovery promise.</h1>
+    <p class="lead">These notes describe a private, single-owner Ubuntu utility. They do not offer a public backup service, accounts, subscriptions, or service-level commitments.</p>
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">Intended use</h2>
+      <p>The utility creates encrypted database snapshots, uploads them to its own private Drive folder, and checks file metadata and downloaded encrypted bytes. It uses only the requested <code>https://www.googleapis.com/auth/drive.file</code> permission for app-created or explicitly selected files.</p>
+      <p>There is no automated sharing or deletion. The Google scope is not immutable or append-only; an authorized owner or application may still be able to change or remove files.</p>
+    </section>
+    <section aria-labelledby="availability">
+      <h2 id="availability">Availability is not guaranteed</h2>
+      <p>Backups depend on Ubuntu, the database, network access, available storage and valid Google authorization. Schedules may be missed and uploads may fail. No guaranteed schedule, recovery point, or successful recovery is offered.</p>
+      <p>A downloaded ciphertext hash checks transport integrity. It does not prove that a database can be restored; recovery requires separate testing and the separately retained recovery identity.</p>
+    </section>
+    <section aria-labelledby="boundary">
+      <h2 id="boundary">A database snapshot is not everything</h2>
+      <p>This is not a complete hosted-platform backup. Storage object bytes and hosted configuration are excluded. Other services, external credentials and deployment configuration require their own recovery arrangements.</p>
+    </section>
+    <section aria-labelledby="owner">
+      <h2 id="owner">The owner stays in control</h2>
+      <p>The owner is responsible for keeping the recovery identity separate from Ubuntu and Drive, reviewing backup age and failures, checking available storage, and testing recovery. Snapshots remain until the owner removes them.</p>
+      <p>Google authorization can be revoked without deleting existing backups. Google and GitHub provide their own account, storage and hosting services under their own policies. No broader legal compliance guarantee is made here.</p>
+    </section>
+    <p class="note">See the <a href="privacy.html">privacy notes</a> for data handling, or return to the <a href="index.html">overview</a>.</p>
+  </main>
+  <footer><p>Coffee Ark Ubuntu Backups</p><p>Private utility · No public service or signups</p><p>Last updated <time datetime="2026-10-19">19 October 2026</time></p></footer>
+</div>
+</body>
+</html>

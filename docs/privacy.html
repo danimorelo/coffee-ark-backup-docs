@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy and data handling for the private Coffee Ark Ubuntu Backups integration.">
+  <title>Coffee Ark Ubuntu Backups · Privacy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header><div class="topline">
+    <a class="brand" href="index.html">Coffee Ark<span>Ubuntu Backups · Private integration</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Use &amp; limits</a>
+    </nav>
+  </div></header>
+  <main id="main" class="details">
+    <p class="eyebrow">Privacy notes</p>
+    <h1>Only what a backup needs.</h1>
+    <p class="lead">This single-owner integration uses Google access to store and verify encrypted backups—not to build profiles, advertise, or provide a public service.</p>
+    <section aria-labelledby="data">
+      <h2 id="data">What the utility handles</h2>
+      <p>Database contents are encrypted on Ubuntu before upload. File names, timestamps and sizes remain visible as metadata; encryption does not hide them. The utility uses file names, sizes, hashes, app metadata, ownership and permission information, and downloaded encrypted bytes only for backup delivery, reconciliation and verification.</p>
+      <p>The recovery identity is kept separately from Ubuntu and Google Drive. A protected refresh credential is stored on Ubuntu; access tokens are held in memory only.</p>
+    </section>
+    <section aria-labelledby="access">
+      <h2 id="access">What Google access permits</h2>
+      <p>The exact scope is <code>https://www.googleapis.com/auth/drive.file</code>: app-created or explicitly selected files. The utility creates its own private backup folder. It does not browse unrelated Drive files, access Gmail, or read unrelated profile data.</p>
+      <p>Ownership information is used to confirm that the destination belongs to the authenticated account. This scope is not immutable or append-only.</p>
+    </section>
+    <section aria-labelledby="retention">
+      <h2 id="retention">Retention and revocation</h2>
+      <p>Snapshots are retained until the owner removes them. The utility does not automatically delete snapshots, change sharing permissions, or share backups.</p>
+      <p>The owner can revoke the Google authorization. Revocation stops future authorized access; it does not erase snapshots already stored locally or in Drive.</p>
+    </section>
+    <section aria-labelledby="providers">
+      <h2 id="providers">No unrelated use</h2>
+      <p>The utility does not sell data or use it for advertising or unrelated purposes. These static information pages contain no forms, trackers, or signup flow.</p>
+      <p>Google operates its account and storage services, and GitHub operates this information site's hosting, under their own policies. These notes do not replace those providers' policies or promise legal compliance.</p>
+    </section>
+    <p class="note">For reliability and recovery boundaries, see <a href="terms.html">use &amp; limits</a>.</p>
+  </main>
+  <footer><p>Coffee Ark Ubuntu Backups</p><p>Private utility · No public service or signups</p><p>Last updated <time datetime="2026-10-19">19 October 2026</time></p></footer>
+</div>
+</body>
+</html>
